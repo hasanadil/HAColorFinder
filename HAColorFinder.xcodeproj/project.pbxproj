@@ -31,7 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9FA1439D1B7BF34A00D71055 /* ImageColorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageColorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA1439D1B7BF34A00D71055 /* HAColorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HAColorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143A11B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageColorFinder/AppDelegate.h; sourceTree = "<group>"; };
 		9FA143A31B7BF34A00D71055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageColorFinder/AppDelegate.m; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		9FA143A81B7BF34A00D71055 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9FA143AA1B7BF34A00D71055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageColorFinder/Images.xcassets; sourceTree = "<group>"; };
 		9FA143AD1B7BF34A00D71055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9FA143B31B7BF34A00D71055 /* ImageColorFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageColorFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FA143B31B7BF34A00D71055 /* HAColorFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HAColorFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143B81B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageColorFinderTests.m; sourceTree = "<group>"; };
 		9FA143C41B7BF37100D71055 /* HAColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAColorFinder.h; path = ImageColorFinder/HAColorFinder.h; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		9FA1439E1B7BF34A00D71055 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9FA1439D1B7BF34A00D71055 /* ImageColorFinder.app */,
-				9FA143B31B7BF34A00D71055 /* ImageColorFinderTests.xctest */,
+				9FA1439D1B7BF34A00D71055 /* HAColorFinder.app */,
+				9FA143B31B7BF34A00D71055 /* HAColorFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9FA1439C1B7BF34A00D71055 /* ImageColorFinder */ = {
+		9FA1439C1B7BF34A00D71055 /* HAColorFinder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FA143BD1B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "ImageColorFinder" */;
+			buildConfigurationList = 9FA143BD1B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "HAColorFinder" */;
 			buildPhases = (
 				9FA143991B7BF34A00D71055 /* Sources */,
 				9FA1439A1B7BF34A00D71055 /* Frameworks */,
@@ -174,14 +174,14 @@
 			);
 			dependencies = (
 			);
-			name = ImageColorFinder;
+			name = HAColorFinder;
 			productName = ImageColorFinder;
-			productReference = 9FA1439D1B7BF34A00D71055 /* ImageColorFinder.app */;
+			productReference = 9FA1439D1B7BF34A00D71055 /* HAColorFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9FA143B21B7BF34A00D71055 /* ImageColorFinderTests */ = {
+		9FA143B21B7BF34A00D71055 /* HAColorFinderTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FA143C01B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "ImageColorFinderTests" */;
+			buildConfigurationList = 9FA143C01B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "HAColorFinderTests" */;
 			buildPhases = (
 				9FA143AF1B7BF34A00D71055 /* Sources */,
 				9FA143B01B7BF34A00D71055 /* Frameworks */,
@@ -192,9 +192,9 @@
 			dependencies = (
 				9FA143B51B7BF34A00D71055 /* PBXTargetDependency */,
 			);
-			name = ImageColorFinderTests;
+			name = HAColorFinderTests;
 			productName = ImageColorFinderTests;
-			productReference = 9FA143B31B7BF34A00D71055 /* ImageColorFinderTests.xctest */;
+			productReference = 9FA143B31B7BF34A00D71055 /* HAColorFinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9FA143981B7BF34A00D71055 /* Build configuration list for PBXProject "ImageColorFinder" */;
+			buildConfigurationList = 9FA143981B7BF34A00D71055 /* Build configuration list for PBXProject "HAColorFinder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -228,8 +228,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9FA1439C1B7BF34A00D71055 /* ImageColorFinder */,
-				9FA143B21B7BF34A00D71055 /* ImageColorFinderTests */,
+				9FA1439C1B7BF34A00D71055 /* HAColorFinder */,
+				9FA143B21B7BF34A00D71055 /* HAColorFinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +282,7 @@
 /* Begin PBXTargetDependency section */
 		9FA143B51B7BF34A00D71055 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9FA1439C1B7BF34A00D71055 /* ImageColorFinder */;
+			target = 9FA1439C1B7BF34A00D71055 /* HAColorFinder */;
 			targetProxy = 9FA143B41B7BF34A00D71055 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -386,7 +386,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ImageColorFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HAColorFinder;
 			};
 			name = Debug;
 		};
@@ -397,7 +397,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ImageColorFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HAColorFinder;
 			};
 			name = Release;
 		};
@@ -416,7 +416,7 @@
 				);
 				INFOPLIST_FILE = ImageColorFinderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HAColorFinderTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageColorFinder.app/Contents/MacOS/ImageColorFinder";
 			};
 			name = Debug;
@@ -432,7 +432,7 @@
 				);
 				INFOPLIST_FILE = ImageColorFinderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = HAColorFinderTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageColorFinder.app/Contents/MacOS/ImageColorFinder";
 			};
 			name = Release;
@@ -440,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9FA143981B7BF34A00D71055 /* Build configuration list for PBXProject "ImageColorFinder" */ = {
+		9FA143981B7BF34A00D71055 /* Build configuration list for PBXProject "HAColorFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FA143BB1B7BF34A00D71055 /* Debug */,
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FA143BD1B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "ImageColorFinder" */ = {
+		9FA143BD1B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "HAColorFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FA143BE1B7BF34A00D71055 /* Debug */,
@@ -457,7 +457,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		9FA143C01B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "ImageColorFinderTests" */ = {
+		9FA143C01B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "HAColorFinderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FA143C11B7BF34A00D71055 /* Debug */,
