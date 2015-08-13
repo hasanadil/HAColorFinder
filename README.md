@@ -9,7 +9,7 @@ This is a delightful library which takes as input an NSImage and return the NSCo
   * HATrieNode.h/.m
   * HAColorComponents.h/.m
   * HAColorComponentsCount.h/.m
-3. Please do not delete the attribution with the files above :)
+3. That's it!
 
 Once added, in the source where you wish you determine an image's dominant color. Simply import the HAColorFinder.h file and invoke the following method:
 
