@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F9DBEC41B7C5E8700EB5DB7 /* HAColorFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9DBEC31B7C5E8700EB5DB7 /* HAColorFinderTests.m */; };
 		9FA143A41B7BF34A00D71055 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143A31B7BF34A00D71055 /* AppDelegate.m */; };
 		9FA143A61B7BF34A00D71055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143A51B7BF34A00D71055 /* main.m */; };
 		9FA143A91B7BF34A00D71055 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143A81B7BF34A00D71055 /* ViewController.m */; };
 		9FA143AB1B7BF34A00D71055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA143AA1B7BF34A00D71055 /* Images.xcassets */; };
 		9FA143AE1B7BF34A00D71055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA143AC1B7BF34A00D71055 /* Main.storyboard */; };
-		9FA143BA1B7BF34A00D71055 /* ImageColorFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */; };
 		9FA143C61B7BF37100D71055 /* HAColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143C51B7BF37100D71055 /* HAColorFinder.m */; };
 		9FA143CA1B7C1F4D00D71055 /* HATrie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143C91B7C1F4D00D71055 /* HATrie.m */; };
 		9FA143CD1B7C1F5700D71055 /* HATrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143CC1B7C1F5700D71055 /* HATrieNode.m */; };
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F9DBEC31B7C5E8700EB5DB7 /* HAColorFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAColorFinderTests.m; sourceTree = "<group>"; };
 		9FA1439D1B7BF34A00D71055 /* HAColorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HAColorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143A11B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageColorFinder/AppDelegate.h; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		9FA143AD1B7BF34A00D71055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FA143B31B7BF34A00D71055 /* HAColorFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HAColorFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143B81B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageColorFinderTests.m; sourceTree = "<group>"; };
 		9FA143C41B7BF37100D71055 /* HAColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAColorFinder.h; path = ImageColorFinder/HAColorFinder.h; sourceTree = "<group>"; };
 		9FA143C51B7BF37100D71055 /* HAColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAColorFinder.m; path = ImageColorFinder/HAColorFinder.m; sourceTree = "<group>"; };
 		9FA143C81B7C1F4D00D71055 /* HATrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATrie.h; path = ImageColorFinder/HATrie.h; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		9FA143B61B7BF34A00D71055 /* ImageColorFinderTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */,
 				9FA143B71B7BF34A00D71055 /* Supporting Files */,
+				9F9DBEC31B7C5E8700EB5DB7 /* HAColorFinderTests.m */,
 			);
 			path = ImageColorFinderTests;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FA143BA1B7BF34A00D71055 /* ImageColorFinderTests.m in Sources */,
+				9F9DBEC41B7C5E8700EB5DB7 /* HAColorFinderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +456,7 @@
 				9FA143BF1B7BF34A00D71055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FA143C01B7BF34A00D71055 /* Build configuration list for PBXNativeTarget "HAColorFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +465,7 @@
 				9FA143C21B7BF34A00D71055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

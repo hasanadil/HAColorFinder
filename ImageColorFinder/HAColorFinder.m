@@ -38,6 +38,14 @@
 }
 
 -(void) fetchDominantColorFromImage:(NSImage*)image withCompletion:(void(^)(NSColor *color, NSTimeInterval processingTime))completion {
+    if (!image) {
+        if (completion) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completion(nil, 0);
+            });
+        }
+        return;
+    }
     
     __block NSMutableDictionary* workerResults = [NSMutableDictionary dictionary];
     
