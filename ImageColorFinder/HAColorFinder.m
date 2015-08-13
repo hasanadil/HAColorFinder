@@ -6,10 +6,6 @@
 //  Copyright (c) 2015 Hasan Adil. All rights reserved.
 //
 
-/*
- http://www.catehuston.com/blog/2013/08/26/extracting-the-dominant-color-from-an-image-in-processing/
- */
-
 #import "HAColorFinder.h"
 #import "HATrie.h"
 #import "HATrieNode.h"
@@ -54,22 +50,6 @@
     __weak typeof(self) weakMe = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         [weakMe imageToPixels:image withCompletion:^(UInt32 *pixels, NSUInteger pixelCount) {
-            
-            
-            /*
-             NSLog(@"Brightness of image:");
-             UInt32 * currentPixel = pixels;
-             for (NSUInteger j = 0; j < height; j++) {
-             for (NSUInteger i = 0; i < width; i++) {
-             // 3.
-             UInt32 color = *currentPixel;
-             printf("%3.0f ", (R(color)+G(color)+B(color))/3.0);
-             // 4.
-             currentPixel++;
-             }
-             printf("\n");
-             }
-             */
             
             //Divide up the work among workers
             NSUInteger numberOfWorkers = 4;
@@ -170,31 +150,4 @@
     }
 }
 
--(void) processPixels:(UInt32*)pixels {
-    
-}
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
