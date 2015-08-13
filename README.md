@@ -12,7 +12,10 @@ This is a delightful library which takes as input an NSImage and return the NSCo
 3. Please do not delete the attribution with the files above :)
 
 Once added, in the source where you wish you determine an image's dominant color. Simply import the HAColorFinder.h file and invoke the following method:
+
+```objc
 -(void) fetchDominantColorFromImage:(NSImage*)image withCompletion:(void(^)(NSColor *color, NSTimeInterval processingTime))completion;
+```
 
 Note. The method above runs completely in the background and you can continue to work on the main thread while the color is being determined. The completion block is called on the main thread.
 
