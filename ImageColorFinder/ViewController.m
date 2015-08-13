@@ -42,8 +42,9 @@
         [self.progressIndicator startAnimation:nil];
         
         __weak typeof(self) weakMe = self;
-        [self.colorFinder fetchDominantColorFromImage:self.imageView.image withCompletion:^(NSColor *color, NSError *error) {
-            NSLog(@"%@", color);
+        [self.colorFinder fetchDominantColorFromImage:self.imageView.image withCompletion:^(NSColor *color, NSTimeInterval processingTime) {
+            NSLog(@"%@ in %f", color, processingTime*1000);
+            
             weakMe.colorWell.color = color;
             [weakMe.colorWell setHidden:NO];
             [weakMe.progressIndicator stopAnimation:nil];

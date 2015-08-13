@@ -113,7 +113,6 @@
             
             //wait on everything to be completed
             dispatch_barrier_async(weakMe.concurrentQueue, ^{
-                NSLog(@"all done in %fms", [[NSDate date] timeIntervalSinceDate:startTime] * 1000);
                 
                 //Get the highest count amont the worker results
                 NSArray* allCounts = [workerResults allValues];
@@ -122,12 +121,13 @@
                 HAColorComponentsCount* colorComponentCount = [sortedCounts firstObject];
                 HAColorComponents *components = colorComponentCount.components;
                 
-                
                 NSColor *dominantColor = [NSColor colorWithCalibratedRed:components.red/255.f green:components.green/255.f blue:components.blue/255.f alpha:1.0];
+                
+                NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:startTime];
                 
                 if (completion) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        completion(dominantColor, nil);
+                        completion(dominantColor, time);
                     });
                 }
             });
