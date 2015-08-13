@@ -13,8 +13,14 @@
 
 @interface HATrie : NSObject
 
+/*
+ Add a new color's RGB values to the trie.
+ */
 -(void) addColorComponents:(HAColorComponents*)colorComponents;
 
+/*
+ Returns the color that has the most number of counts
+ */
 -(HAColorComponentsCount*) maxCountColorComponents;
 
 @end

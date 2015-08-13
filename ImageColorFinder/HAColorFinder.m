@@ -38,7 +38,6 @@
 }
 
 -(void) fetchDominantColorFromImage:(NSImage*)image withCompletion:(void(^)(NSColor *color, NSTimeInterval processingTime))completion {
-    NSLog(@"%s", __FUNCTION__);
     
     __block NSMutableDictionary* workerResults = [NSMutableDictionary dictionary];
     
@@ -67,7 +66,6 @@
             //Divide up the work among workers
             NSUInteger numberOfWorkers = 4;
             NSUInteger pixelsPerWorker = pixelCount/numberOfWorkers;
-            NSLog(@"pixelsPerWorker %ld", (unsigned long)pixelsPerWorker);
             
             for (NSUInteger worker = 0; worker < numberOfWorkers; worker++) {
                 
@@ -79,7 +77,6 @@
                     
                     //Get the pixels to work on
                     NSUInteger workerOffset = worker * pixelsPerWorker;
-                    NSLog(@"workerOffset %ld", (unsigned long)workerOffset);
                     
                     UInt32 * workerPixels;
                     workerPixels = (UInt32 *) calloc(pixelsPerWorker, sizeof(UInt32));
@@ -104,10 +101,7 @@
                     }
                     
                     HAColorComponentsCount *maxColorComponentsCount = trie.maxCountColorComponents;
-                    NSLog(@"max %f, %f, %f = %ld", maxColorComponentsCount.components.red, maxColorComponentsCount.components.green, maxColorComponentsCount.components.blue, (unsigned long)maxColorComponentsCount.count);
                     [workerResults setObject:maxColorComponentsCount forKey:@(worker)];
-                    
-                    NSLog(@"worker %ld ended", (unsigned long)worker);
                 });
             }
             
@@ -144,7 +138,6 @@
     NSUInteger width = CGImageGetWidth(inputCGImage);
     NSUInteger height = CGImageGetHeight(inputCGImage);
     NSUInteger numberOfPixels = height * width;
-    NSLog(@"Image is %ld x %ld = %ld pixels", (unsigned long)width, (unsigned long)height, (unsigned long)numberOfPixels);
     
     NSUInteger bytesPerPixel = 4;
     NSUInteger bytesPerRow = bytesPerPixel * width;
@@ -163,6 +156,7 @@
     //Cleanup
     CGColorSpaceRelease(colorSpace);
     CGContextRelease(context);
+    
     if (completion) {
         completion(pixels, numberOfPixels);
     }

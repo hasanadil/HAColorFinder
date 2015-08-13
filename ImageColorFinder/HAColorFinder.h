@@ -11,6 +11,9 @@
 
 @interface HAColorFinder : NSObject
 
+/*
+ Return the color in the image that is most dominant. Where dominant is defined as the most number of pixels which contain the same color.
+ */
 -(void) fetchDominantColorFromImage:(NSImage*)image withCompletion:(void(^)(NSColor *color, NSTimeInterval processingTime))completion;
 
 @end
