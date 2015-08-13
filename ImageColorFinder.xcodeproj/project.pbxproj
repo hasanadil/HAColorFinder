@@ -13,6 +13,11 @@
 		9FA143AB1B7BF34A00D71055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA143AA1B7BF34A00D71055 /* Images.xcassets */; };
 		9FA143AE1B7BF34A00D71055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA143AC1B7BF34A00D71055 /* Main.storyboard */; };
 		9FA143BA1B7BF34A00D71055 /* ImageColorFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */; };
+		9FA143C61B7BF37100D71055 /* HAColorFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143C51B7BF37100D71055 /* HAColorFinder.m */; };
+		9FA143CA1B7C1F4D00D71055 /* HATrie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143C91B7C1F4D00D71055 /* HATrie.m */; };
+		9FA143CD1B7C1F5700D71055 /* HATrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143CC1B7C1F5700D71055 /* HATrieNode.m */; };
+		9FA143D01B7C215200D71055 /* HAColorComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143CF1B7C215200D71055 /* HAColorComponents.m */; };
+		9FA143D31B7C2B2100D71055 /* HAColorComponentsCount.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA143D21B7C2B2100D71055 /* HAColorComponentsCount.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +33,26 @@
 /* Begin PBXFileReference section */
 		9FA1439D1B7BF34A00D71055 /* ImageColorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageColorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143A11B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9FA143A31B7BF34A00D71055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageColorFinder/AppDelegate.h; sourceTree = "<group>"; };
+		9FA143A31B7BF34A00D71055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageColorFinder/AppDelegate.m; sourceTree = "<group>"; };
 		9FA143A51B7BF34A00D71055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FA143A71B7BF34A00D71055 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9FA143A81B7BF34A00D71055 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9FA143AA1B7BF34A00D71055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9FA143AA1B7BF34A00D71055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageColorFinder/Images.xcassets; sourceTree = "<group>"; };
 		9FA143AD1B7BF34A00D71055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FA143B31B7BF34A00D71055 /* ImageColorFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageColorFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143B81B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA143B91B7BF34A00D71055 /* ImageColorFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageColorFinderTests.m; sourceTree = "<group>"; };
+		9FA143C41B7BF37100D71055 /* HAColorFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAColorFinder.h; path = ImageColorFinder/HAColorFinder.h; sourceTree = "<group>"; };
+		9FA143C51B7BF37100D71055 /* HAColorFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAColorFinder.m; path = ImageColorFinder/HAColorFinder.m; sourceTree = "<group>"; };
+		9FA143C81B7C1F4D00D71055 /* HATrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATrie.h; path = ImageColorFinder/HATrie.h; sourceTree = "<group>"; };
+		9FA143C91B7C1F4D00D71055 /* HATrie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATrie.m; path = ImageColorFinder/HATrie.m; sourceTree = "<group>"; };
+		9FA143CB1B7C1F5700D71055 /* HATrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HATrieNode.h; path = ImageColorFinder/HATrieNode.h; sourceTree = "<group>"; };
+		9FA143CC1B7C1F5700D71055 /* HATrieNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HATrieNode.m; path = ImageColorFinder/HATrieNode.m; sourceTree = "<group>"; };
+		9FA143CE1B7C215200D71055 /* HAColorComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAColorComponents.h; path = ImageColorFinder/HAColorComponents.h; sourceTree = "<group>"; };
+		9FA143CF1B7C215200D71055 /* HAColorComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAColorComponents.m; path = ImageColorFinder/HAColorComponents.m; sourceTree = "<group>"; };
+		9FA143D11B7C2B2100D71055 /* HAColorComponentsCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HAColorComponentsCount.h; path = ImageColorFinder/HAColorComponentsCount.h; sourceTree = "<group>"; };
+		9FA143D21B7C2B2100D71055 /* HAColorComponentsCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HAColorComponentsCount.m; path = ImageColorFinder/HAColorComponentsCount.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +76,12 @@
 		9FA143941B7BF34A00D71055 = {
 			isa = PBXGroup;
 			children = (
-				9FA1439F1B7BF34A00D71055 /* ImageColorFinder */,
+				9FA143AC1B7BF34A00D71055 /* Main.storyboard */,
+				9FA143AA1B7BF34A00D71055 /* Images.xcassets */,
+				9FA143C31B7BF35400D71055 /* Core */,
+				9FA1439F1B7BF34A00D71055 /* Controllers */,
+				9FA143C71B7BF46300D71055 /* Delegate */,
+				9FA143A01B7BF34A00D71055 /* Supporting Files */,
 				9FA143B61B7BF34A00D71055 /* ImageColorFinderTests */,
 				9FA1439E1B7BF34A00D71055 /* Products */,
 			);
@@ -76,17 +96,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9FA1439F1B7BF34A00D71055 /* ImageColorFinder */ = {
+		9FA1439F1B7BF34A00D71055 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9FA143A21B7BF34A00D71055 /* AppDelegate.h */,
-				9FA143A31B7BF34A00D71055 /* AppDelegate.m */,
 				9FA143A71B7BF34A00D71055 /* ViewController.h */,
 				9FA143A81B7BF34A00D71055 /* ViewController.m */,
-				9FA143AA1B7BF34A00D71055 /* Images.xcassets */,
-				9FA143AC1B7BF34A00D71055 /* Main.storyboard */,
-				9FA143A01B7BF34A00D71055 /* Supporting Files */,
 			);
+			name = Controllers;
 			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
@@ -97,6 +113,7 @@
 				9FA143A51B7BF34A00D71055 /* main.m */,
 			);
 			name = "Supporting Files";
+			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
 		9FA143B61B7BF34A00D71055 /* ImageColorFinderTests */ = {
@@ -114,6 +131,32 @@
 				9FA143B81B7BF34A00D71055 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FA143C31B7BF35400D71055 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9FA143C41B7BF37100D71055 /* HAColorFinder.h */,
+				9FA143C51B7BF37100D71055 /* HAColorFinder.m */,
+				9FA143C81B7C1F4D00D71055 /* HATrie.h */,
+				9FA143C91B7C1F4D00D71055 /* HATrie.m */,
+				9FA143CB1B7C1F5700D71055 /* HATrieNode.h */,
+				9FA143CC1B7C1F5700D71055 /* HATrieNode.m */,
+				9FA143CE1B7C215200D71055 /* HAColorComponents.h */,
+				9FA143CF1B7C215200D71055 /* HAColorComponents.m */,
+				9FA143D11B7C2B2100D71055 /* HAColorComponentsCount.h */,
+				9FA143D21B7C2B2100D71055 /* HAColorComponentsCount.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		9FA143C71B7BF46300D71055 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				9FA143A21B7BF34A00D71055 /* AppDelegate.h */,
+				9FA143A31B7BF34A00D71055 /* AppDelegate.m */,
+			);
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +260,12 @@
 			files = (
 				9FA143A91B7BF34A00D71055 /* ViewController.m in Sources */,
 				9FA143A61B7BF34A00D71055 /* main.m in Sources */,
+				9FA143D31B7C2B2100D71055 /* HAColorComponentsCount.m in Sources */,
+				9FA143CD1B7C1F5700D71055 /* HATrieNode.m in Sources */,
+				9FA143C61B7BF37100D71055 /* HAColorFinder.m in Sources */,
 				9FA143A41B7BF34A00D71055 /* AppDelegate.m in Sources */,
+				9FA143D01B7C215200D71055 /* HAColorComponents.m in Sources */,
+				9FA143CA1B7C1F4D00D71055 /* HATrie.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +294,7 @@
 				9FA143AD1B7BF34A00D71055 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

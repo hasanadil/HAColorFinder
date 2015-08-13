@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,20 +641,21 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Dominant Color Finder" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="maxSize" type="size" width="480" height="270"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -667,15 +668,54 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-v2-95h">
+                                <rect key="frame" x="-3" y="-3" width="486" height="276"/>
+                                <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="mario" id="1Kz-ha-EY7"/>
+                            </imageView>
+                            <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="uP7-3j-nPK">
+                                <rect key="frame" x="401" y="15" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Q30-69-Qfb"/>
+                                    <constraint firstAttribute="width" constant="64" id="k0m-nM-Hz9"/>
+                                </constraints>
+                                <color key="color" red="0.87660509347915649" green="0.85382685302828043" blue="0.84079753041150451" alpha="1" colorSpace="calibratedRGB"/>
+                            </colorWell>
+                            <progressIndicator maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-Sb-lCw">
+                                <rect key="frame" x="417" y="31" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="DmZ-PU-60s"/>
+                                    <constraint firstAttribute="width" constant="32" id="KZI-FC-2jM"/>
+                                </constraints>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="nN1-Sb-lCw" firstAttribute="centerY" secondItem="uP7-3j-nPK" secondAttribute="centerY" id="1Eq-WC-ISe"/>
+                            <constraint firstItem="gJj-v2-95h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="E80-aJ-7W5"/>
+                            <constraint firstAttribute="bottom" secondItem="uP7-3j-nPK" secondAttribute="bottom" constant="15" id="Laf-gT-EcI"/>
+                            <constraint firstAttribute="trailing" secondItem="gJj-v2-95h" secondAttribute="trailing" id="cJr-4c-BWo"/>
+                            <constraint firstAttribute="bottom" secondItem="gJj-v2-95h" secondAttribute="bottom" id="cbu-yY-b9F"/>
+                            <constraint firstItem="gJj-v2-95h" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="gbV-M2-TQH"/>
+                            <constraint firstAttribute="trailing" secondItem="uP7-3j-nPK" secondAttribute="trailing" constant="15" id="maZ-nI-f0t"/>
+                            <constraint firstItem="nN1-Sb-lCw" firstAttribute="centerX" secondItem="uP7-3j-nPK" secondAttribute="centerX" id="yOI-X8-Bsg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorWell" destination="uP7-3j-nPK" id="btE-bz-MTv"/>
+                        <outlet property="imageView" destination="gJj-v2-95h" id="iQW-Bb-oOz"/>
+                        <outlet property="progressIndicator" destination="nN1-Sb-lCw" id="hgk-aA-63x"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mario" width="1105" height="1501"/>
+    </resources>
 </document>
