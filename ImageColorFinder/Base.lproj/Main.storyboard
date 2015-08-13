@@ -673,9 +673,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-N3-UjY">
+                                <rect key="frame" x="138" y="35" width="204" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="HBU-0p-pfo"/>
+                                    <constraint firstAttribute="height" constant="200" id="ghg-Ot-9Hw"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drag and drop an image here." id="jAI-v2-PxV">
+                                    <font key="font" metaFont="system" size="14"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gJj-v2-95h">
                                 <rect key="frame" x="-3" y="-3" width="486" height="276"/>
-                                <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="mario" id="1Kz-ha-EY7"/>
+                                <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="1Kz-ha-EY7"/>
                             </imageView>
                             <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="uP7-3j-nPK">
                                 <rect key="frame" x="401" y="15" width="64" height="64"/>
@@ -697,16 +709,19 @@
                             <constraint firstItem="nN1-Sb-lCw" firstAttribute="centerY" secondItem="uP7-3j-nPK" secondAttribute="centerY" id="1Eq-WC-ISe"/>
                             <constraint firstItem="gJj-v2-95h" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="E80-aJ-7W5"/>
                             <constraint firstAttribute="bottom" secondItem="uP7-3j-nPK" secondAttribute="bottom" constant="15" id="Laf-gT-EcI"/>
+                            <constraint firstAttribute="centerX" secondItem="vW2-N3-UjY" secondAttribute="centerX" id="WyR-0Z-S8h"/>
                             <constraint firstAttribute="trailing" secondItem="gJj-v2-95h" secondAttribute="trailing" id="cJr-4c-BWo"/>
                             <constraint firstAttribute="bottom" secondItem="gJj-v2-95h" secondAttribute="bottom" id="cbu-yY-b9F"/>
                             <constraint firstItem="gJj-v2-95h" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="gbV-M2-TQH"/>
                             <constraint firstAttribute="trailing" secondItem="uP7-3j-nPK" secondAttribute="trailing" constant="15" id="maZ-nI-f0t"/>
+                            <constraint firstAttribute="centerY" secondItem="vW2-N3-UjY" secondAttribute="centerY" id="vfi-RF-hRM"/>
                             <constraint firstItem="nN1-Sb-lCw" firstAttribute="centerX" secondItem="uP7-3j-nPK" secondAttribute="centerX" id="yOI-X8-Bsg"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="colorWell" destination="uP7-3j-nPK" id="btE-bz-MTv"/>
                         <outlet property="imageView" destination="gJj-v2-95h" id="iQW-Bb-oOz"/>
+                        <outlet property="infoLabel" destination="vW2-N3-UjY" id="qlt-ae-0XQ"/>
                         <outlet property="progressIndicator" destination="nN1-Sb-lCw" id="hgk-aA-63x"/>
                     </connections>
                 </viewController>
@@ -715,7 +730,4 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mario" width="1105" height="1501"/>
-    </resources>
 </document>

@@ -38,6 +38,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([object isEqual:self.imageView] && [keyPath isEqualToString:@"image"]) {
         
+        [self.infoLabel setHidden:YES];
         [self.colorWell setHidden:YES];
         [self.progressIndicator startAnimation:nil];
         

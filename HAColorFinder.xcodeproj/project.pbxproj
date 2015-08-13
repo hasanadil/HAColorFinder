@@ -34,12 +34,12 @@
 		9F9DBEC31B7C5E8700EB5DB7 /* HAColorFinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAColorFinderTests.m; sourceTree = "<group>"; };
 		9FA1439D1B7BF34A00D71055 /* HAColorFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HAColorFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143A11B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ImageColorFinder/AppDelegate.h; sourceTree = "<group>"; };
-		9FA143A31B7BF34A00D71055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ImageColorFinder/AppDelegate.m; sourceTree = "<group>"; };
+		9FA143A21B7BF34A00D71055 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9FA143A31B7BF34A00D71055 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9FA143A51B7BF34A00D71055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FA143A71B7BF34A00D71055 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9FA143A81B7BF34A00D71055 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9FA143AA1B7BF34A00D71055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageColorFinder/Images.xcassets; sourceTree = "<group>"; };
+		9FA143AA1B7BF34A00D71055 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9FA143AD1B7BF34A00D71055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FA143B31B7BF34A00D71055 /* HAColorFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HAColorFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA143B81B7BF34A00D71055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,12 +76,8 @@
 		9FA143941B7BF34A00D71055 = {
 			isa = PBXGroup;
 			children = (
-				9FA143AC1B7BF34A00D71055 /* Main.storyboard */,
-				9FA143AA1B7BF34A00D71055 /* Images.xcassets */,
 				9FA143C31B7BF35400D71055 /* Core */,
-				9FA1439F1B7BF34A00D71055 /* Controllers */,
-				9FA143C71B7BF46300D71055 /* Delegate */,
-				9FA143A01B7BF34A00D71055 /* Supporting Files */,
+				9FA1439F1B7BF34A00D71055 /* Example */,
 				9FA143B61B7BF34A00D71055 /* ImageColorFinderTests */,
 				9FA1439E1B7BF34A00D71055 /* Products */,
 			);
@@ -96,13 +92,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9FA1439F1B7BF34A00D71055 /* Controllers */ = {
+		9FA1439F1B7BF34A00D71055 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9FA143A01B7BF34A00D71055 /* Supporting Files */,
+				9FA143AA1B7BF34A00D71055 /* Images.xcassets */,
+				9FA143AC1B7BF34A00D71055 /* Main.storyboard */,
 				9FA143A71B7BF34A00D71055 /* ViewController.h */,
 				9FA143A81B7BF34A00D71055 /* ViewController.m */,
+				9FA143A21B7BF34A00D71055 /* AppDelegate.h */,
+				9FA143A31B7BF34A00D71055 /* AppDelegate.m */,
 			);
-			name = Controllers;
+			name = Example;
 			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
@@ -113,7 +114,6 @@
 				9FA143A51B7BF34A00D71055 /* main.m */,
 			);
 			name = "Supporting Files";
-			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
 		9FA143B61B7BF34A00D71055 /* ImageColorFinderTests */ = {
@@ -148,15 +148,6 @@
 				9FA143D21B7C2B2100D71055 /* HAColorComponentsCount.m */,
 			);
 			name = Core;
-			sourceTree = "<group>";
-		};
-		9FA143C71B7BF46300D71055 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				9FA143A21B7BF34A00D71055 /* AppDelegate.h */,
-				9FA143A31B7BF34A00D71055 /* AppDelegate.m */,
-			);
-			name = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +285,6 @@
 				9FA143AD1B7BF34A00D71055 /* Base */,
 			);
 			name = Main.storyboard;
-			path = ImageColorFinder;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

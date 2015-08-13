@@ -14,6 +14,7 @@
 }
 
 //User interface
+@property (nonatomic, weak) IBOutlet NSTextField* infoLabel;
 @property (nonatomic, weak) IBOutlet NSImageView* imageView;
 @property (nonatomic, weak) IBOutlet NSColorWell* colorWell;
 @property (nonatomic, weak) IBOutlet NSProgressIndicator* progressIndicator;
