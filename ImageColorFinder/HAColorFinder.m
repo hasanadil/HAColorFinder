@@ -28,7 +28,7 @@
 -(instancetype) init {
     self = [super init];
     if (self) {
-        self.concurrentQueue = dispatch_queue_create("workers", DISPATCH_QUEUE_CONCURRENT);
+        _concurrentQueue = dispatch_queue_create("workers", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -49,7 +49,7 @@
     
     __weak typeof(self) weakMe = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        [weakMe imageToPixels:image withCompletion:^(UInt32 *pixels, NSUInteger pixelCount) {
+        [weakMe pixelsFromImage:image withCompletion:^(UInt32 *pixels, NSUInteger pixelCount) {
             
             //Divide up the work among workers
             NSUInteger numberOfWorkers = 4;
@@ -81,7 +81,7 @@
                         if ((red == 0 && green == 0 && blue == 0) || (red == 1 && green == 1 && blue == 1)) {
                             continue;
                         }
-                        //NSLog(@"%f, %f, %f", red, green, blue);
+                        
                         HAColorComponents *components = [[HAColorComponents alloc] initWithRed:red green:green blue:blue];
                         [trie addColorComponents:components];
                         
@@ -117,7 +117,8 @@
     });
 }
 
--(void) imageToPixels:(NSImage*)image withCompletion:(void(^)(UInt32 *pixels, NSUInteger pixelCount))completion {
+-(void) pixelsFromImage:(NSImage*)image
+         withCompletion:(void(^)(UInt32 *pixels, NSUInteger pixelCount))completion {
     
     //Extract pixels from the image in a 1D array
     CFDataRef inputData = (__bridge CFDataRef)[image TIFFRepresentation];
@@ -136,7 +137,10 @@
     pixels = (UInt32 *) calloc(numberOfPixels, sizeof(UInt32));
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(pixels, width, height, bitsPerComponent, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
+    CGContextRef context = CGBitmapContextCreate(pixels, width, height,
+                                                 bitsPerComponent, bytesPerRow,
+                                                 colorSpace,
+                                                 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     
     //Fill in the pixels array
     CGContextDrawImage(context, CGRectMake(0, 0, width, height), inputCGImage);
