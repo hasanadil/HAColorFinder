@@ -22,6 +22,9 @@ Note. The method above runs completely in the background and you can continue to
 # Example app
 A mac app which uses HAColorFinder library to determine the dominant color within an image. Simply drag an image onto the app and a color well shows the color within a few milliseconds.
 
+# Still to do
+Support alpha channels in an image.
+
 # Made by
 * Hasan Adil
 * @dispatch_hasan
