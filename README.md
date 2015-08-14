@@ -1,5 +1,5 @@
 # HAColorFinder
-This is a delightful library which takes as input an NSImage and return the NSColor instance which represents the color which is most dominant acorss all the pixels of the image.
+This is a delightful library which takes as input an NSImage and returns the NSColor instance which represents the color which is most dominant acorss all the pixels of the image.
 
 ### Installation
 1. Clone this repository.
