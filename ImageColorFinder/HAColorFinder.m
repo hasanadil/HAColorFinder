@@ -52,7 +52,7 @@
         [weakMe pixelsFromImage:image withCompletion:^(UInt32 *pixels, NSUInteger pixelCount) {
             
             //Divide up the work among workers
-            NSUInteger numberOfWorkers = 4;
+            NSUInteger numberOfWorkers = 1024;
             NSUInteger pixelsPerWorker = pixelCount/numberOfWorkers;
             
             for (NSUInteger worker = 0; worker < numberOfWorkers; worker++) {
